@@ -1,6 +1,6 @@
 <?php
 include "header.php";
-
+if (isset($_SESSION['usuario']) && $_SESSION['usuario']['rol'] == 1) {
 ?>
 <!-- Page Content -->
 <div class="container">
@@ -13,4 +13,7 @@ include "header.php";
 
 <?php
 include "footer.php";
+}else{
+  header("location:../index.html");
+}
 ?>
