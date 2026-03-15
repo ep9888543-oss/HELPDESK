@@ -20,10 +20,10 @@
     </div>
 
     <!-- Login Form -->
-    <form id="frmLogin" method="post" onsubmit="return loginUsuario()">
+<form id="frmLogin" method="post" onsubmit="return loginUsuarios()"></form>
       <input type="text" id="login" class="fadeIn second" name="login" placeholder="username" required>
-      <input type="text" id="password" class="fadeIn third" name="password" placeholder="password" required>
-      <input type="submit" class="fadeIn fourth" value="entrar">
+      <input type="password" id="password" class="fadeIn third" name="password" placeholder="password" required>
+<input type="submit" class="fadeIn fourth" value="entrar" onclick="loginUsuarios()">
     </form>
 
     <!-- Remind Passowrd -->
@@ -53,6 +53,7 @@
     <script src="public/jquery/jquery-3.6.0.min.js"></script>
     <script src="public/bootstrap/popper.min.js"></script>
     <script src="public/bootstrap/bootstrap.min.js"></script>
+    <script src="public/sweetalert2/sweetalert2@11.js"></script>
     <script src="public/js/usuarios/login.js"></script>
 </body>
 </html>
