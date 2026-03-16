@@ -28,7 +28,8 @@ INNER JOIN
 $respuesta = mysqli_query($conexion, $sql);
 ?>
 
-<table class="table table-sm" id="tablaUsuariosTable">
+<table class="table table-sm dt-responsive nowrap"  
+         id="tablaUsuariosTable" style="width:100%">
     <thead>
         <th>Nombre</th>
         <th>Apellido paterno</th>
@@ -39,9 +40,10 @@ $respuesta = mysqli_query($conexion, $sql);
         <th>Telefono</th>
         <th>Correo</th>
         <th>Usuario</th>
+        <th>ubicacion</th>
         <th> Reset Password</th>
         <th>Cambiar rol</th>
-        <th>ubicacion</th>
+        <td>Activar</td>
         <th>Editar</th>
         <th>Eliminar</th>
     </thead>
@@ -58,6 +60,7 @@ $respuesta = mysqli_query($conexion, $sql);
             <td><?php echo $mostrar['telefono']?></td>
             <td><?php echo $mostrar['correo']?></td>
             <td><?php echo $mostrar['nombreUsuario']?></td>
+            <td><?php echo $mostrar['ubicacion']?></td>
             <td>
                 <button class="btn btn-sucess">
                     cambiar password
@@ -68,7 +71,21 @@ $respuesta = mysqli_query($conexion, $sql);
                     cambiar rol
                 </button>
             </td>
-            <td><?php echo $mostrar['ubicacion']?></td>
+            <td>
+                <?php if($mostrar['estatus'] ==  1) {?>
+                <button class="btn btn-info btn-sm">
+                    Activo
+                </button>
+                <?php
+                }else{
+                ?>
+                <button class="btn btn-info btn-sm">
+                    Inactivo
+                </button>
+                <?php
+                }
+                ?>
+            </td>
             <td>
                 <button class="btn btn-warning">
                     Editar

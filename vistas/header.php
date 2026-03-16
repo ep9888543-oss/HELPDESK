@@ -11,6 +11,7 @@ session_start();
     <link rel="stylesheet" href="../public/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="../public/css/plantilla.css">
     <link rel="stylesheet" href="../public/datatable/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="../public/datatable/<link rel="stylesheet" href="https://cdn.datatables.net/responsive/3.0.6/css/responsive.dataTables.min.css">">
     <title>HelpsDesk</title>
 </head>
 <body>
