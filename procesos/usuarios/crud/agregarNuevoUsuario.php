@@ -1,5 +1,5 @@
 <?php
-$dato = array(
+$datos = array(
     "paterno" => $_POST['paterno'],
     "materno" => $_POST['materno'],
     "nombre" => $_POST['nombre'],
@@ -16,5 +16,5 @@ $dato = array(
 include "../../../classes/Usuarios.php";
 $Usuarios = new Usuarios();
 
-echo $Usuarios->agregarNuevoUsuario($dato);
+echo $Usuarios->agregarNuevoUsuario($datos);
 ?>

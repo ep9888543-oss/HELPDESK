@@ -21,3 +21,18 @@ function agregarNuevosUsuarios(){
     });
     return false;
 }
+
+
+
+function obtenerDatosUsuario(idUsuario){
+     $.ajax({
+        type:"POST",
+        data: "idUsuaio=" + idUsuario,
+        url:"../procesos/usuarios/crud/obtenerDatosUsuario.php",
+        success:function(respuesta){
+            respuesta = jQuey.parseJSON(respuesta);
+            console.log(respuesta);
+            
+        }
+        });
+}
