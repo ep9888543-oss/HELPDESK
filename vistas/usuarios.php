@@ -18,7 +18,8 @@ if (isset($_SESSION['usuario']) && $_SESSION['usuario']['rol'] ==2) {
 </div>
 
 <?php
-include"usuarios/modalAgregar.php";
+include "usuarios/modalAgregar.php";
+include "usuarios/modalActualizar.php";
 include "footer.php";
 ?>
     <script src="../public/js/usuarios/usuarios.js"></script>

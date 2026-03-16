@@ -36,13 +36,12 @@ $respuesta = mysqli_query($conexion, $sql);
         <th>Apellido materno</th>
         <th>Nombre</th>
         <th>Edad</th>
-        <th>Sexo</th>
         <th>Telefono</th>
         <th>Correo</th>
         <th>Usuario</th>
         <th>ubicacion</th>
+        <th>Sexo</th>
         <th> Reset Password</th>
-        <th>Cambiar rol</th>
         <td>Activar</td>
         <th>Editar</th>
         <th>Eliminar</th>
@@ -56,21 +55,17 @@ $respuesta = mysqli_query($conexion, $sql);
             <td><?php echo $mostrar['materno']?></td>
             <td><?php echo $mostrar['nombrePersona']?></td>
             <td><?php echo $mostrar['fechaNacimiento']?></td>
-            <td><?php echo $mostrar['sexo']?></td>
             <td><?php echo $mostrar['telefono']?></td>
             <td><?php echo $mostrar['correo']?></td>
             <td><?php echo $mostrar['nombreUsuario']?></td>
             <td><?php echo $mostrar['ubicacion']?></td>
+            <td><?php echo $mostrar['sexo']?></td>
             <td>
                 <button class="btn btn-sucess">
                     cambiar password
                 </button>
             </td>
-            <td>
-                <button class="btn btn-primary">
-                    cambiar rol
-                </button>
-            </td>
+
             <td>
                 <?php if($mostrar['estatus'] ==  1) {?>
                 <button class="btn btn-info btn-sm">
@@ -87,7 +82,8 @@ $respuesta = mysqli_query($conexion, $sql);
                 ?>
             </td>
             <td>
-                <button class="btn btn-warning">
+                <button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#modalActualizarUsuarios"
+                onclick="obtenerDatosUsuarios(<?php  echo $mostrar['idUsuario'] ?>)">
                     Editar
                 </button>
             </td>
