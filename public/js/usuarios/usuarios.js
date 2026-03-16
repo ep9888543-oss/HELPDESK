@@ -31,7 +31,17 @@ function obtenerDatosUsuario(idUsuario){
         url:"../procesos/usuarios/crud/obtenerDatosUsuario.php",
         success:function(respuesta){
             respuesta = jQuey.parseJSON(respuesta);
-            console.log(respuesta);
+            $('#idUsuario').val(respuesta['idUsuario']);
+            $('#paternou').val(respuesta['paterno']);
+            $('#maternou').val(respuesta['materno']);
+            $('#nombreu').val(respuesta['nombrePersona']);
+            $('#fechaNacimientou').val(respuesta['fechaNacimiento']);
+            $('#sexou').val(respuesta['sexo']);
+            $('#telefonou').val(respuesta['telefono']);
+            $('#correou').val(respuesta['correo']);
+            $('#usuariou').val(respuesta['nombreUsuario']);
+            $('#idRolu').val(respuesta['idRol']);
+            $('#ubicaionu').val(respuesta['ubicacion']);
             
         }
         });
