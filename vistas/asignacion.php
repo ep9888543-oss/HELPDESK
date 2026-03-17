@@ -25,6 +25,9 @@ if (isset($_SESSION['usuario']) &&  $_SESSION['usuario']['rol'] ==2) {
 <?php
 include "asignacion/modalAsignar.php";
 include "footer.php";
+?>
+<script src="../public/js/asignacion/asignacion.js"></script>
+<?php
 }else{
   header("location:../index.html");
 }
